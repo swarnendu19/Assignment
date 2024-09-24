@@ -6,9 +6,11 @@ class Settings(BaseSettings):
     MONGO_INITDB_DATABASE: str = os.environ["MONGO_INITDB_DATABASE"]
     JWT_PUBLIC_KEY: str = os.environ["JWT_PUBLIC_KEY"]
     JWT_PRIVATE_KEY: str = os.environ["JWT_PRIVATE_KEY"]
-    REFRESH_TOKEN_EXPIRES_IN: int = int(os.environ["REFRESH_TOKEN_EXPIRES_IN"])  # Convert to int
-    ACCESS_TOKEN_EXPIRES_IN: int = int(os.environ["ACCESS_TOKEN_EXPIRES_IN"])    # Convert to int
+    REFRESH_TOKEN_EXPIRES_IN: int = int(os.environ["REFRESH_TOKEN_EXPIRES_IN"])   
+    ACCESS_TOKEN_EXPIRES_IN: int = int(os.environ["ACCESS_TOKEN_EXPIRES_IN"])     
     JWT_ALGORITHM: str = os.environ["JWT_ALGORITHM"]
     CLIENT_ORIGIN: str = os.environ["CLIENT_ORIGIN"]
 
 settings = Settings()
+
+ 
