@@ -17,8 +17,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)   
 
 origins = [
-    settings.CLIENT_ORIGIN,
-    "http://localhost:8000"
+    settings.CLIENT_ORIGIN,  # Ensure this is correctly set
+    "http://localhost:3000",  # Example frontend origin
+    "http://localhost:8000"   # The backend itself if needed
+    "http://localhost:5173"   # The backend itself if needed
 ]
 
 app.add_middleware(
@@ -28,6 +30,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 app.include_router(auth.router, tags=["Auth"], prefix='/api/auth')
 
 @app.get("/api/test")
