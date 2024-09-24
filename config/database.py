@@ -6,4 +6,4 @@ from models.user import User
 
 async def startDB():
     client = AsyncIOMotorClient(settings.DATABASE_URL)
-    await init_beanie(database=client.db_name, document_models=[User])
+    await init_beanie(database=client.fastapi, document_models=[User])

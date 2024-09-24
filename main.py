@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from config.database import startDB
 from contextlib import asynccontextmanager
+from routers import auth
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -12,6 +14,8 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(lifespan=lifespan)  # Set the lifespan function here
+
+app.include_router(auth.router, tags=["Auth"], prefix='/api/auth')
 
 @app.get("/api/test")
 async def root():
