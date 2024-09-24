@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.eggs/
+*.egg
+dist/
+build/
+*.whl
+
+# Virtual environment
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# FastAPI specific
+instance/
+.pytest_cache/
+*.sqlite3
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.iml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Coverage reports
+.coverage
+coverage.xml
+*.cover
+*.log
+
+# Pytest
+.cache
+nosetests.xml
+*.cover
+*.log
+
+# Pylint
+pylint-report.txt
+pylint-results.txt
+
+# Type hinting cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Other files
+*.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+*.sqlite
+*.db
+
+# Local environment variables
+.env.local
+.env.*.local
