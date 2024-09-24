@@ -41,7 +41,6 @@ async def createUser(payload : Register):
 
 
 #Sign IN 
-
 @router.post('/login')
 async def login(payload: Login, response: Response):
     # Authenticate the user
